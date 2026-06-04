@@ -1,81 +1,85 @@
 ﻿# Taskly Health Expo
 
-O Taskly Health é um aplicativo mobile desenvolvido em React Native com Expo Go e JavaScript. O objetivo do projeto é ajudar o usuário a organizar sua rotina de saúde de forma simples, com telas para login, dashboard, hidratação, exercícios, alimentação, fichas alimentares, rotina e acompanhamento de progresso.
+O Taskly Health Expo é um aplicativo desenvolvido em React Native com Expo Go e JavaScript. O projeto foi criado para ajudar o usuário a organizar hábitos de saúde em uma rotina simples, com acesso a hidratação, exercícios, alimentação, fichas alimentares, rotina personalizada e progresso.
 
-## Objetivo do projeto
+O aplicativo foi migrado para Expo para facilitar a execução no celular usando o Expo Go. Com isso, o projeto pode ser testado de forma prática durante o desenvolvimento, sem precisar gerar APK. A linguagem utilizada no projeto é JavaScript.
 
-O projeto foi criado para funcionar como um organizador pessoal de hábitos saudáveis. A aplicação permite que o usuário acompanhe tarefas do dia, registre consumo de água, visualize exercícios, organize refeições e acompanhe sua evolução. A proposta é manter uma navegação simples, visual limpa e código dividido em partes menores para facilitar manutenção e entendimento.
+## Como o projeto funciona
+
+Ao abrir o aplicativo, o usuário acessa a tela de login. Essa tela serve como entrada principal do sistema e foi organizada para apresentar apenas os campos necessários, mantendo uma aparência mais profissional e sem mensagens desnecessárias na interface.
+
+Depois do login, o usuário é levado para o dashboard. O dashboard funciona como a tela central do aplicativo, reunindo os principais caminhos do sistema. A partir dele, o usuário consegue acessar hidratação, alimentação, exercícios, rotina e progresso.
+
+O módulo de hidratação permite acompanhar o consumo diário de água. Ele ajuda o usuário a registrar sua ingestão e visualizar melhor sua meta durante o dia.
+
+O módulo de exercícios reúne atividades físicas para consulta e organização da rotina de treino. Ele pode apresentar informações como nome do exercício, grupo muscular, séries, repetições e tempo de execução.
+
+O módulo de alimentação permite organizar refeições do dia. Ele ajuda o usuário a estruturar café da manhã, almoço, lanche e jantar de forma simples.
+
+As fichas alimentares servem para organizar combinações de refeições. Elas ajudam o usuário a montar sugestões de alimentação de acordo com sua rotina e objetivo.
+
+A rotina personalizada permite reunir hábitos diários em um só lugar. Ela funciona como uma organização das tarefas de saúde que o usuário deseja acompanhar.
+
+A área de progresso permite observar a evolução do usuário. Ela mostra o andamento das atividades e ajuda a manter noção de constância dentro do aplicativo.
+
+## Explicação dos arquivos principais
+
+O arquivo package.json guarda as informações principais do projeto. Nele ficam o nome do aplicativo, os scripts de execução e as dependências necessárias para o Expo, React Native e demais bibliotecas.
+
+O arquivo App.js é o ponto inicial da aplicação. Ele inicia o funcionamento do app e organiza a chamada das telas principais.
+
+O arquivo app.json guarda configurações do Expo, como nome do projeto, versão, plataformas permitidas e informações usadas pelo Expo Go.
+
+O arquivo babel.config.js configura o Babel, que ajuda o projeto a interpretar corretamente o código JavaScript usado pelo React Native.
+
+O arquivo README.md explica o funcionamento do projeto, as tecnologias usadas, como rodar o aplicativo e qual é o objetivo de cada parte.
+
+A pasta src guarda o código principal do aplicativo. Ela concentra as telas, componentes, dados, serviços e estilos usados no projeto.
+
+A pasta telas guarda as telas acessadas pelo usuário. Cada tela representa uma parte visual do aplicativo, como login, dashboard, hidratação, exercícios, alimentação, rotina e progresso.
+
+A pasta componentes guarda partes reutilizáveis da interface. Esses componentes evitam repetição de código e ajudam a manter o projeto mais organizado.
+
+A pasta dados guarda informações usadas pelo aplicativo, como listas de exercícios, alimentos, fichas ou valores iniciais.
+
+A pasta servicos guarda funções que cuidam da lógica de armazenamento, leitura e controle de dados. Essa separação ajuda a evitar que as telas fiquem grandes demais.
+
+A pasta estilos guarda arquivos de estilo usados pelas telas e componentes. O objetivo é manter a aparência do aplicativo separada da lógica principal.
+
+A pasta assets guarda imagens, ícones e arquivos visuais usados pelo aplicativo.
+
+O arquivo .gitignore informa ao Git quais arquivos e pastas não devem ser enviados para o GitHub. Isso evita subir node_modules, cache do Expo e arquivos temporários.
 
 ## Tecnologias utilizadas
 
-O projeto utiliza React Native para criação das telas mobile.
+React Native foi usado para criar as telas do aplicativo.
 
-O Expo Go é utilizado para executar o aplicativo no celular sem precisar gerar APK durante o desenvolvimento.
+Expo Go foi usado para executar o projeto no celular durante o desenvolvimento.
 
-O JavaScript foi utilizado como linguagem principal do projeto.
+JavaScript foi usado como linguagem principal do projeto.
 
-O AsyncStorage é utilizado para salvar informações localmente no dispositivo.
+AsyncStorage foi usado para salvar dados localmente no dispositivo.
 
-O Expo Router ou navegação interna organiza a troca entre as telas do aplicativo.
+Git e GitHub foram usados para versionamento e publicação do código.
 
-O StyleSheet do React Native organiza os estilos visuais da aplicação.
+## Como rodar o projeto
 
-## Como executar o projeto
-
-Primeiro instale as dependências do projeto com o comando:
+Primeiro, instale as dependências com o comando abaixo.
 
 npm install
 
-Depois execute o aplicativo com o comando:
+Depois, inicie o projeto com o comando abaixo.
 
 npx expo start -c
 
 Para abrir no celular, escaneie o QR Code usando o aplicativo Expo Go.
 
-Para abrir no navegador, utilize:
+Para abrir no navegador, use o comando abaixo.
 
 npx expo start --web
 
-## Tela de login
+## Observação sobre desenvolvimento
 
-A tela de login é responsável pela entrada inicial do usuário no aplicativo. Ela possui campos para e-mail e senha, mantendo uma apresentação mais profissional e sem textos desnecessários na interface. O objetivo dessa tela é permitir acesso ao app de forma direta, limpa e organizada.
-
-## Dashboard
-
-O dashboard é a tela principal após o login. Ele apresenta uma visão geral da rotina do usuário, mostrando os principais módulos de saúde em um só lugar. Essa tela serve como ponto central de navegação para hidratação, alimentação, exercícios, rotina e progresso.
-
-## Módulo de hidratação
-
-O módulo de hidratação permite acompanhar o consumo diário de água. Ele ajuda o usuário a registrar quantidades consumidas e visualizar o andamento da meta diária. Esse módulo foi pensado para incentivar constância durante o dia.
-
-## Módulo de exercícios
-
-O módulo de exercícios apresenta atividades físicas organizadas para consulta e execução. Ele pode conter informações como nome do exercício, grupo muscular, séries, repetições e tempo de execução. A ideia é facilitar a criação de uma rotina prática de treino.
-
-## Módulo de alimentação
-
-O módulo de alimentação permite organizar refeições e visualizar opções alimentares. Ele ajuda o usuário a planejar melhor café da manhã, almoço, lanche e jantar. A proposta é apoiar uma rotina alimentar mais equilibrada sem tornar o aplicativo complexo.
-
-## Fichas alimentares
-
-As fichas alimentares servem para montar combinações de refeições de acordo com o objetivo do usuário. Essa parte do projeto ajuda a organizar sugestões e escolhas alimentares de forma mais clara, mantendo a lógica principal do Taskly Health.
-
-## Rotina personalizada
-
-A rotina personalizada permite que o usuário organize seus hábitos diários. Ela reúne informações de exercícios, hidratação, alimentação e progresso em uma estrutura simples. Essa tela ajuda o usuário a acompanhar pequenas tarefas de saúde durante o dia.
-
-## Progresso
-
-A área de progresso mostra o acompanhamento das atividades feitas pelo usuário. Ela serve para visualizar evolução e manter registro dos hábitos concluídos. O objetivo é transformar os dados do uso diário em uma percepção clara de avanço.
-
-## Organização do código
-
-O código foi organizado em arquivos menores para facilitar leitura e manutenção. As telas ficam separadas por responsabilidade, os componentes reutilizáveis ficam isolados, os dados ficam em arquivos próprios e os serviços cuidam das funções de armazenamento e controle. Essa separação evita arquivos muito grandes e deixa o projeto mais fácil de explicar.
-
-## Comentários no código
-
-Os comentários foram mantidos de forma profissional para explicar o papel de cada parte importante do projeto. A intenção é ajudar na apresentação acadêmica e facilitar o entendimento de quem for ler o código posteriormente.
-
-## Observação sobre uso de IA
+O código foi organizado em arquivos menores para facilitar leitura, manutenção e apresentação acadêmica. A refatoração buscou diminuir repetições, separar responsabilidades e deixar o projeto mais simples de entender.
 
 Foi utilizado IA para poder facilitar o adiantamento do projeto.
